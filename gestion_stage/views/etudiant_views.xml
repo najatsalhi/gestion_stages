@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_etudiant_list" model="ir.ui.view">
+        <field name="name">etudiant.list</field>
+        <field name="model">gestion_stage.etudiant</field>
+        <field name="arch" type="xml">
+            <list string="Liste des étudiants">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="filiere"/>
+                <field name="annee"/>
+            </list>
+        </field>
+    </record> 
+
+    <record id="view_etudiant_form" model="ir.ui.view">
+        <field name="name">etudiant.form</field>
+        <field name="model">gestion_stage.etudiant</field>
+        <field name="arch" type="xml">
+            <form string="Étudiant">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="email"/>
+                        <field name="filiere"/>
+                        <field name="annee"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,4 @@
+id                      ,name                    ,model_id:id                          ,group_id:id         ,perm_read ,perm_write ,perm_create ,perm_unlink
+access_etudiant         ,access_etudiant         ,model_gestion_stage_etudiant         ,group_student       ,        1 ,         1 ,          1 ,          1
+access_demande_stage    ,access_demande_stage    ,model_gestion_stage_demande_stage    ,group_stage_manager ,        1 ,         1 ,          1 ,          1
+access_convention_stage ,access_convention_stage ,model_gestion_stage_convention_stage ,group_stage_manager ,        1 ,         1 ,          1 ,          1

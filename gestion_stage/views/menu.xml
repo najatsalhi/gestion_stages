@@ -1,0 +1,44 @@
+<odoo>
+    <!-- Actions -->
+    <!-- Action pour la vue des étudiants -->
+    <record id="action_etudiant" model="ir.actions.act_window">
+        <field name="name">Étudiants</field>
+        <field name="res_model">gestion_stage.etudiant</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p>Liste des étudiants enregistrés dans le système.</p>
+        </field>
+    </record>
+
+    <!-- Action pour la vue des demandes de stage -->
+    <record id="action_demande_stage" model="ir.actions.act_window">
+        <field name="name">Demandes de Stage</field>
+        <field name="res_model">gestion_stage.demande_stage</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p>Gestion des demandes de stage soumises par les étudiants.</p>
+        </field>
+    </record>
+
+    <!-- Action pour la vue des conventions de stage -->
+    <record id="action_convention_stage" model="ir.actions.act_window">
+        <field name="name">Conventions de Stage</field>
+        <field name="res_model">gestion_stage.convention_stage</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p>Gestion des conventions de stage générées et signées.</p>
+        </field>
+    </record>
+
+    <!-- Menu principal "Gestion des Stages" -->
+    <menuitem id="menu_gestion_stage" name="Gestion des Stages" sequence="10"/>
+
+    <!-- Sous-menu "Étudiants" -->
+    <menuitem id="menu_etudiant" name="Étudiants" parent="menu_gestion_stage" action="action_etudiant" sequence="10"/>
+
+    <!-- Sous-menu "Demandes de Stage" -->
+    <menuitem id="menu_demande_stage" name="Demandes de Stage" parent="menu_gestion_stage" action="action_demande_stage" sequence="20"/>
+
+    <!-- Sous-menu "Conventions de Stage" -->
+    <menuitem id="menu_convention_stage" name="Conventions de Stage" parent="menu_gestion_stage" action="action_convention_stage" sequence="30"/>
+</odoo>

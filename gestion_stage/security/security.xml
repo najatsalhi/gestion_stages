@@ -1,0 +1,13 @@
+<odoo>
+    <!-- Groupe pour les étudiants -->
+    <record id="group_student" model="res.groups">
+        <field name="name">Student</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+
+    <!-- Groupe pour les gestionnaires de stage -->
+    <record id="group_stage_manager" model="res.groups">
+        <field name="name">Stage Manager</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>

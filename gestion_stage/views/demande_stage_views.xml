@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_demande_stage_tree" model="ir.ui.view">
+        <field name="name">demande_stage.list</field>
+        <field name="model">gestion_stage.demande_stage</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="etudiant_id"/>
+                <field name="date_demande"/>
+                <field name="statut"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_demande_stage_form" model="ir.ui.view">
+        <field name="name">demande_stage.form</field>
+        <field name="model">gestion_stage.demande_stage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="etudiant_id"/>
+                        <field name="date_demande"/>
+                        <field name="statut"/>
+                        <field name="remarques"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>
