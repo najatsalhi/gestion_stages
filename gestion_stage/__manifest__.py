@@ -18,6 +18,7 @@
     'version': '0.1',
     'application': True,
     'installable': True,
+    'license': 'LGPL-3',
     # any module necessary for this one to work correctly
     'depends': ['base'],
 
@@ -25,12 +26,12 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
-        # 'views/views.xml',
-        # 'views/templates.xml',
         'views/etudiant_views.xml',
         'views/demande_stage_views.xml',
         'views/convention_stage_views.xml',
         'views/menu.xml',
+        'views/demande_stage_report.xml',
+        'views/demande_stage_report_action.xml'  # Ensure this line is included
     ],
      'images': ['static/description/icon.png'], 
     # only loaded in demonstration mode

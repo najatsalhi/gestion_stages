@@ -1,4 +1,7 @@
-id                      ,name                    ,model_id:id                          ,group_id:id         ,perm_read ,perm_write ,perm_create ,perm_unlink
-access_etudiant         ,access_etudiant         ,model_gestion_stage_etudiant         ,group_student       ,        1 ,         1 ,          1 ,          1
-access_demande_stage    ,access_demande_stage    ,model_gestion_stage_demande_stage    ,group_stage_manager ,        1 ,         1 ,          1 ,          1
-access_convention_stage ,access_convention_stage ,model_gestion_stage_convention_stage ,group_stage_manager ,        1 ,         1 ,          1 ,          1
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_etudiant,Étudiant,gestion_stage.model_gestion_stage_etudiant,gestion_stage.group_etudiant,1,1,1,1
+access_demande_stage_etudiant,Demande Stage Étudiant,gestion_stage.model_gestion_stage_demande_stage,gestion_stage.group_etudiant,1,1,1,1
+access_demande_stage_encadrant,Demande Stage Encadrant,gestion_stage.model_gestion_stage_demande_stage,gestion_stage.group_encadrant,1,1,1,1
+access_convention_stage_admin,Convention Stage Admin,gestion_stage.model_gestion_stage_convention_stage,gestion_stage.group_admin_stage,1,1,1,1
+access_rapport_stage_etudiant,Rapport Stage Étudiant,gestion_stage.model_gestion_stage_rapport_stage,gestion_stage.group_etudiant,1,1,1,1
+access_gestion_stage_rapport_stage,access_gestion_stage_rapport_stage,gestion_stage.model_gestion_stage_rapport_stage,base.group_user,1,1,1,1

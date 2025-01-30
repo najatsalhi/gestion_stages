@@ -3,10 +3,10 @@
         <field name="name">convention_stage.list</field>
         <field name="model">gestion_stage.convention_stage</field>
         <field name="arch" type="xml">
-            <list>
-                <field name="demande_id"/>
-                <field name="entreprise"/>
-                <field name="date_signature"/>
+            <list string="Conventions de Stage">
+                <field name="demande_stage_id"/>
+                <field name="valide_encadrant"/>
+                <field name="valide_admin"/>
             </list>
         </field>
     </record>
@@ -18,10 +18,10 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="demande_id"/>
-                        <field name="entreprise"/>
-                        <field name="date_signature"/>
-                        <field name="fichier_pdf"/>
+                         <field name="demande_stage_id"/>
+                        <field name="fichier_convention" widget="binary"/>
+                        <field name="valide_encadrant"/>
+                        <field name="valide_admin"/>
                     </group>
                 </sheet>
             </form>

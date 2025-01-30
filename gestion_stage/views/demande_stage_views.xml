@@ -3,9 +3,11 @@
         <field name="name">demande_stage.list</field>
         <field name="model">gestion_stage.demande_stage</field>
         <field name="arch" type="xml">
-            <list>
+            <list string="Demandes de Stage">
                 <field name="etudiant_id"/>
-                <field name="date_demande"/>
+                <field name="entreprise_nom"/>
+                <field name="date_debut"/>
+                <field name="date_fin"/>
                 <field name="statut"/>
             </list>
         </field>
@@ -15,14 +17,23 @@
         <field name="name">demande_stage.form</field>
         <field name="model">gestion_stage.demande_stage</field>
         <field name="arch" type="xml">
-            <form>
+            <form string="Demande de Stage">
                 <sheet>
                     <group>
                         <field name="etudiant_id"/>
-                        <field name="date_demande"/>
-                        <field name="statut"/>
-                        <field name="remarques"/>
+                        <field name="entreprise_nom"/>
+                        <field name="entreprise_adresse"/>
+                        <field name="responsable"/>
                     </group>
+                    <group>
+                        <field name="date_debut"/>
+                        <field name="date_fin"/>
+                        <field name="statut"/>
+                    </group>
+                     <!-- Bouton pour imprimer le rapport -->
+                    <footer>
+                        <button name="action_report_demande_stage" string="Imprimer Rapport" type="action" class="btn-primary"/>
+                    </footer>
                 </sheet>
             </form>
         </field>

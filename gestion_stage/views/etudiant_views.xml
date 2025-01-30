@@ -5,10 +5,11 @@
         <field name="model">gestion_stage.etudiant</field>
         <field name="arch" type="xml">
             <list string="Liste des étudiants">
-                <field name="name"/>
+                <field name="nom"/>
+                <field name="prenom"/>
                 <field name="email"/>
                 <field name="filiere"/>
-                <field name="annee"/>
+                <field name="niveau"/>
             </list>
         </field>
     </record> 
@@ -20,10 +21,11 @@
             <form string="Étudiant">
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="email"/>
+                        <field name="nom"/>
+                        <field name="prenom"/>
+                         <field name="email"/>
                         <field name="filiere"/>
-                        <field name="annee"/>
+                        <field name="niveau"/>
                     </group>
                 </sheet>
             </form>

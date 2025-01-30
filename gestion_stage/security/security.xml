@@ -1,13 +1,33 @@
 <odoo>
-    <!-- Groupe pour les étudiants -->
-    <record id="group_student" model="res.groups">
-        <field name="name">Student</field>
-        <field name="category_id" ref="base.module_category_hidden"/>
-    </record>
+    <data noupdate="1">
 
-    <!-- Groupe pour les gestionnaires de stage -->
-    <record id="group_stage_manager" model="res.groups">
-        <field name="name">Stage Manager</field>
-        <field name="category_id" ref="base.module_category_hidden"/>
-    </record>
+        <!-- Groupe : Étudiant -->
+        <record id="group_etudiant" model="res.groups">
+            <field name="name">Étudiant</field>
+            <field name="category_id" ref="base.module_category_human_resources"/>
+            <field name="comment">Les étudiants peuvent soumettre et suivre leurs demandes de stage.</field>
+        </record>
+
+        <!-- Groupe : Encadrant -->
+        <record id="group_encadrant" model="res.groups">
+            <field name="name">Encadrant</field>
+            <field name="category_id" ref="base.module_category_human_resources"/>
+            <field name="comment">Les encadrants peuvent valider ou rejeter les demandes de stage.</field>
+        </record>
+
+        <!-- Groupe : Administrateur -->
+        <record id="group_admin_stage" model="res.groups">
+            <field name="name">Administrateur des Stages</field>
+            <field name="category_id" ref="base.module_category_human_resources"/>
+            <field name="comment">Les administrateurs gèrent les conventions et le suivi des stages.</field>
+        </record>
+
+        <!-- Groupe : Rapport Stage Étudiant -->
+        <record id="group_rapport_stage_etudiant" model="res.groups">
+            <field name="name">Rapport Stage Étudiant</field>
+            <field name="category_id" ref="base.module_category_human_resources"/>
+            <field name="comment">Les étudiants peuvent soumettre et suivre leurs rapports de stage.</field>
+        </record>
+
+    </data>
 </odoo>
