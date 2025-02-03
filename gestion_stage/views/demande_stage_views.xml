@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="view_demande_stage_tree" model="ir.ui.view">
         <field name="name">demande_stage.list</field>
@@ -30,12 +31,8 @@
                         <field name="date_fin"/>
                         <field name="statut"/>
                     </group>
-                     <!-- Bouton pour imprimer le rapport -->
-                    <footer>
-                        <button name="action_report_demande_stage" string="Imprimer Rapport" type="action" class="btn-primary"/>
-                    </footer>
                 </sheet>
             </form>
         </field>
-    </record>
+   </record>
 </odoo>

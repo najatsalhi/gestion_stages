@@ -8,6 +8,7 @@
                 <field name="nom"/>
                 <field name="prenom"/>
                 <field name="email"/>
+                 <field name="phone"/>
                 <field name="filiere"/>
                 <field name="niveau"/>
             </list>
@@ -24,6 +25,7 @@
                         <field name="nom"/>
                         <field name="prenom"/>
                          <field name="email"/>
+                         <field name="phone"/>
                         <field name="filiere"/>
                         <field name="niveau"/>
                     </group>

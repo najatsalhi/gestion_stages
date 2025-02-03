@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Actions -->
     <!-- Action pour la vue des étudiants -->
@@ -19,6 +20,7 @@
             <p>Gestion des demandes de stage soumises par les étudiants.</p>
         </field>
     </record>
+     
 
     <!-- Action pour la vue des conventions de stage -->
     <record id="action_convention_stage" model="ir.actions.act_window">
@@ -29,6 +31,7 @@
             <p>Gestion des conventions de stage générées et signées.</p>
         </field>
     </record>
+
 
     <!-- Menu principal "Gestion des Stages" -->
     <menuitem id="menu_gestion_stage" name="Gestion des Stages" sequence="10"/>
@@ -41,4 +44,5 @@
 
     <!-- Sous-menu "Conventions de Stage" -->
     <menuitem id="menu_convention_stage" name="Conventions de Stage" parent="menu_gestion_stage" action="action_convention_stage" sequence="30"/>
-</odoo>
+
+   </odoo>

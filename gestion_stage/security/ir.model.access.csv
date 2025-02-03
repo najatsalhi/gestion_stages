@@ -1,7 +1,10 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_etudiant,Étudiant,gestion_stage.model_gestion_stage_etudiant,gestion_stage.group_etudiant,1,1,1,1
-access_demande_stage_etudiant,Demande Stage Étudiant,gestion_stage.model_gestion_stage_demande_stage,gestion_stage.group_etudiant,1,1,1,1
-access_demande_stage_encadrant,Demande Stage Encadrant,gestion_stage.model_gestion_stage_demande_stage,gestion_stage.group_encadrant,1,1,1,1
-access_convention_stage_admin,Convention Stage Admin,gestion_stage.model_gestion_stage_convention_stage,gestion_stage.group_admin_stage,1,1,1,1
-access_rapport_stage_etudiant,Rapport Stage Étudiant,gestion_stage.model_gestion_stage_rapport_stage,gestion_stage.group_etudiant,1,1,1,1
-access_gestion_stage_rapport_stage,access_gestion_stage_rapport_stage,gestion_stage.model_gestion_stage_rapport_stage,base.group_user,1,1,1,1
+access_etudiant_etudiant,Accès Étudiant (Étudiant),model.etudiant,gestion_stage.group_etudiant,1,0,0,0
+access_etudiant_encadrant,Accès Étudiant (Encadrant),model.etudiant,gestion_stage.group_encadrant,1,1,1,1
+access_etudiant_admin,Accès Étudiant (Admin),model.etudiant,gestion_stage.group_admin_stage,1,1,1,1
+access_demande_stage_etudiant,Accès Demande de stage (Étudiant),model.demande_stage,gestion_stage.group_etudiant,1,1,1,0
+access_demande_stage_encadrant,Accès Demande de stage (Encadrant),model.demande_stage,gestion_stage.group_encadrant,1,1,1,1
+access_demande_stage_admin,Accès Demande de stage (Admin),model.demande_stage,gestion_stage.group_admin_stage,1,1,1,1
+access_convention_stage_etudiant,Accès Convention de stage (Étudiant),model.convention_stage,gestion_stage.group_etudiant,1,0,0,0
+access_convention_stage_encadrant,Accès Convention de stage (Encadrant),model.convention_stage,gestion_stage.group_encadrant,1,1,1,1
+access_convention_stage_admin,Accès Convention de stage (Admin),model.convention_stage,gestion_stage.group_admin_stage,1,1,1,1

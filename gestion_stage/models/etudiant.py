@@ -5,9 +5,10 @@ class Etudiant(models.Model):
     _name = 'gestion_stage.etudiant'
     _description = "Étudiant"
 
-    nom = fields.Char(string="Nom", required=True)
-    prenom = fields.Char(string="Prénom", required=True)
-    email = fields.Char(string="Email", required=True)
+    nom = fields.Char(string='Nom', required=True)
+    prenom = fields.Char(string="Prénom", required=True)    
+    email = fields.Char(string='Email')
+    phone  = fields.Integer(string='Téléphone')
     filiere = fields.Selection([
         ('mgsi', 'Génie management et gouvernance des systèmes d\'information'),
         ('informatique', 'Informatique'),
