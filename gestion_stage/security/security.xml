@@ -9,20 +9,25 @@
     <record id="gestion_stage.group_etudiant" model="res.groups">
         <field name="name">Étudiant</field>
         <field name="category_id" ref="module_gestion"/>
-        <!-- Vous pouvez inclure des implied_ids si nécessaire -->
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
     </record>
 
     <!-- Groupe Encadrant -->
     <record id="gestion_stage.group_encadrant" model="res.groups">
         <field name="name">Encadrant</field>
         <field name="category_id" ref="module_gestion"/>
-        <!-- Vous pouvez inclure des implied_ids si nécessaire -->
+        <!-- L'encadrant hérite des droits du groupe Étudiant -->
+        <field name="implied_ids" eval="[(4, ref('gestion_stage.group_etudiant'))]"/>
+
     </record>
 
     <!-- Groupe Administrateur de stage -->
     <record id="gestion_stage.group_admin_stage" model="res.groups">
         <field name="name">Administrateur des stages</field>
         <field name="category_id" ref="module_gestion"/>
-        <!-- Vous pouvez lier ce groupe aux utilisateurs administrateurs de base si besoin -->
+        <!-- L'administrateur hérite des droits du groupe Encadrant -->
+        <field name="implied_ids" eval="[(4, ref('gestion_stage.group_encadrant'))]"/>
+        <!-- On peut lier ici des utilisateurs spécifiques (facultatif) -->
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
     </record>
 </odoo>
